@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<title>{% block title %}Profil de {{ user.username }}{% endblock %}</title>
+
+{% block content %}
+    <main id="corps_mes_posts">
+        <section style="display:flex;flex-direction:column;justify-content:center;align-items:center;" class="user_profile_infos">
+            <h2 class="voir_posts_titre">PROFIL DE {{ user.username | upper}}</h2>
+            <img id="user_profile_picture" src="{{ user.profile_photo.url }}" alt="altitude" width="300" height="300" style="margin-bottom: 20px;border-radius: 50%;">
+            <p class="user_infos" style="margin: 10px 0 5px 0;font-size: 21px;background-color: white;padding: 15px;width: 100%;box-shadow: 1px 1px 5px #222;">
+                Nom : <strong>{{ user.username }}</strong>
+            </p>
+            {% if user.email %}
+                <p class="user_infos" style="margin: 10px 0 5px 0;font-size: 21px;background-color: white;padding: 15px;width: 100%;box-shadow: 1px 1px 5px #222;">
+                    Mail : <strong>{{ user.email }}</strong>
+                </p>
+            {% else %}
+                <p class="user_infos" style="margin: 10px 0 5px 0;font-size: 21px;background-color: white;padding: 15px;width: 100%;box-shadow: 1px 1px 5px #222;">
+                    Mail : <strong>aucun email renseigné</strong>
+                </p>
+            {% endif %}
+            <p class="user_infos" style="margin: 10px 0 15px 0;font-size: 21px;background-color: white;padding: 15px;width: 100%;box-shadow: 1px 1px 5px #222;">
+                Rôle : <strong>{{ user.role | lower}}</strong>
+            </p>
+        </section>
+    </main>
+{% endblock %}

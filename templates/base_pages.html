@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <link rel=”stylesheet” href="{% static '/main_space/css/style.css' %}" type="text/css">
+        <link rel="shortcut icon" href="http://127.0.0.1:5500/assets/images/LogoMakr-05nrqV.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>ON THE ROAD</title>
+        {% endblock head %}
+    </head>
+    <body>
+    {% block content %}
+    {% endblock content %}
+    </body>
+</html>
