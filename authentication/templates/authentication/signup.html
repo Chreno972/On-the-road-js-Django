@@ -13,7 +13,7 @@
             <h1>Inscrivez-vous</h1>
             <form method="post" enctype="multipart/form-data">
                 {{ form.as_p }}
-                {% csrf_token %}
+                {% csrf_token %} 
                 <button type="submit" >S’inscrire</button>
             </form>
         </div>
