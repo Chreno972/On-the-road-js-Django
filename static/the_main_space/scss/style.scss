@@ -296,11 +296,14 @@ body{
                 text-align: center;
                 border-radius: 5px;
                 border: none;
+                &:focus {
+                    outline: none;
+                }
             }
             button[type=submit] {
                 color: #fff;
                 margin: 20px auto 0 auto;
-                background-color: red;
+                background-color: #222;
                 border: none;
                 box-shadow: 1px 1px 6px #222;
                 border-radius: 5px;
@@ -339,6 +342,83 @@ body{
         font-size: 80px;
         color: yellow;
         text-shadow: 1px 1px 1px #222222;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input {
+            width: 300px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 30px;
+            &:focus {
+                outline: none;
+            }
+        }
+        input#id_profile_photo {
+            padding: 0;
+            width:320px;
+            height: auto;
+            background: #222;
+            color: #fff;
+        }
+        input[type=file]::-webkit-file-upload-button {
+            background: red;
+            height: 40px;
+            border: none;
+            color: #fff;
+        }
+        button[type=submit] {
+            color: #fff;
+            margin: 20px auto 0 auto;
+            background-color: red;
+            border: none;
+            box-shadow: 1px 1px 6px #222;
+            border-radius: 5px;
+            width: 320px;
+            padding: 10px;
+            text-align: center;
+        }
+        #subscribe_return {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button[type=submit] {
+                color: #fff;
+                margin: 20px auto 0 auto;
+                background-color: #222;
+                border: none;
+                box-shadow: 1px 1px 6px #222;
+                border-radius: 5px;
+                width: 320px;
+                padding: 10px;
+                text-align: center;
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            .deconnexion_retour {
+                color: #fff;
+                margin: 20px auto 0 auto;
+                background-color: red;
+                border: none;
+                box-shadow: 1px 1px 6px #222;
+                border-radius: 5px;
+                width: 300px;
+                padding: 10px;
+                text-align: center;
+            }
+        }
     }
 }
 
