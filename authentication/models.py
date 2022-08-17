@@ -22,6 +22,7 @@ class User(AbstractUser):
 
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
+    email = models.CharField(max_length=50, blank=True, null=True)
     profile_photo = models.ImageField(
         upload_to='profile_photos/',
         default='profile_photos/main_image.jpg', blank=True, null=True

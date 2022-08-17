@@ -69,6 +69,7 @@ def login_page(request):
         context={'form': form, 'message': message}
     )
 
+
 def upload_profile_photo(request):
     form = UploadProfilePhotoForm(instance=request.user)
     if request.method == 'POST':
