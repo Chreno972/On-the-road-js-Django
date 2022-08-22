@@ -52,12 +52,20 @@ class SignupForm(UserCreationForm):
         max_length=100,
         widget=forms.EmailInput(
             attrs={'placeholder': 'Email'}
-        )
+        ),
+        label=''
     )
-    password = forms.CharField(
-        max_length=50,
+    password1 = forms.CharField(
+        max_length=100,
         widget=forms.PasswordInput(
-            attrs={"placeholder": "Mot de passe"}
+            attrs={'placeholder': 'Password'}
+        ),
+        label=''
+    )
+    password2 = forms.CharField(
+        max_length=100,
+        widget=forms.PasswordInput(
+            attrs={'placeholder': 'Confirm Password'}
         ),
         label=''
     )
@@ -74,8 +82,6 @@ class SignupForm(UserCreationForm):
             'email',
             'first_name',
             'last_name',
-            'password',
-            'profile_photo'
         )
 
 

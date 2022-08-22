@@ -7,17 +7,15 @@
         <link rel="stylesheet" href="{% static 'the_main_space/css/style.css' %}" type="text/css">
         <title>SUBSCRIBE</title>
     </head>
-    <body>
+    <body id="body_subscription">
         <div id="subscription">
             <img src="{% static 'the_main_space/images/LogoMakr-05nrqV.png' %}" alt="">
             <h1>Inscrivez-vous</h1>
+            {% if form.errors %}
+                {{ form.errors }}
+            {% endif %}
             <form method="post" enctype="multipart/form-data">
-                {{ form.username }}
-                {{ form.first_name }}
-                {{ form.last_name }}
-                {{ form.email }}
-                {{ form.password }}
-                {{ form.profile_photo }}
+                {{ form.as_p }}
                 {% csrf_token %}
                 <div id="subscribe_return">
                     <button type="submit" >S’inscrire</button>

@@ -25,7 +25,7 @@ class User(AbstractUser):
     email = models.CharField(max_length=50, blank=True, null=True)
     profile_photo = models.ImageField(
         upload_to='profile_photos/',
-        default='profile_photos/main_image.jpg', blank=True, null=True
+        default='profile_photos/photoretouches.jpeg', blank=True, null=True
     )
     role = models.CharField(
         max_length=50,

@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
 LOGIN_URL = 'login'
 MEDIA_URL = "media/"
 MEDIA_ROOT = "media/"
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'main_space/home'
 
 
 # Default primary key field type

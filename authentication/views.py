@@ -24,7 +24,7 @@ def signup_page(request):
     return render(
         request,
         'authentication/signup.html',
-        context={'form': form}
+        context={'form': form},
     )
 
 
@@ -71,11 +71,27 @@ def login_page(request):
 
 
 def upload_profile_photo(request):
+    """_summary_
+
+    Args:
+        request (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     form = UploadProfilePhotoForm(instance=request.user)
     if request.method == 'POST':
-        form = UploadProfilePhotoForm(request.POST, request.FILES, instance=request.user)
+        form = UploadProfilePhotoForm(
+            request.POST,
+            request.FILES,
+            instance=request.user
+        )
         if form.is_valid():
             form.save()
             return redirect('home')
-    return render(request, 'authentication/upload_profile_photo.html', context={'form': form})
+    return render(
+        request,
+        'authentication/upload_profile_photo.html',
+        context={'form': form}
+    )
 
